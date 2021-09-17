@@ -14,7 +14,7 @@ ECHO PRESS 5 for EXIT
 ECHO ...............................................
 ECHO.
 ECHO 1 - Basic apps
-ECHO 2 - Developer apps
+ECHO 2 - Office apps
 ECHO 3 - Chocolatey
 ECHO 4 - Upgrade apps
 ECHO 5 - EXIT
@@ -40,11 +40,13 @@ ECHO ...............................................
 ECHO ...............................................
 GOTO MENU
 
+
 :COMMON
 REM basic apps
 choco install %currentpath%\commonapps.config
 ECHO commonapps installation completed.
 GOTO MENU
+
 
 :OFFICE
 REM basic apps
@@ -52,14 +54,17 @@ choco install %currentpath%\officeapps.config
 ECHO officeapps installation completed.
 GOTO MENU
 
+
 :DEV
 REM developer tools
 choco install %currentpath%\devapps.config   
 ECHO devapps installation completed.
 GOTO MENU
 
+
 :UPG
 choco upgrade all
 GOTO MENU
+
 
 :EOF
